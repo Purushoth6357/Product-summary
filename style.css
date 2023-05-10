@@ -1,0 +1,161 @@
+:root {
+    --clr-primary: hsl(225, 100%, 94%);
+    --clr-secodary: hsl(245, 75%, 52%);
+    --clr-neutral-98: hsl(225, 100%, 98%);
+    --clr-neutral-55: hsl(224, 23%, 55%);
+    --clr-neutral-23: hsl(223, 47%, 23%);
+    --ff-base: 'Red Hat Display', sans-serif;
+    --fw-regular: 500;
+    --fw-bold: 700;
+    --fw-bolder: 900;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/*
+    2. Remove default margin
+  */
+
+* {
+    margin: 0;
+}
+
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+
+html,
+body {
+    height: 100%;
+}
+
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/*
+    6. Improve media defaults
+  */
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+/*
+    7. Remove built-in form typography styles
+  */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+
+/* General styling */
+
+body {
+    display: grid;
+    margin: 1rem;
+    place-items: center;
+    background-image: url("images/pattern-background-mobile.svg");
+    background-repeat: no-repeat;
+    background-color: var(--clr-primary);
+    font-size: 16px;
+    font-family: var(--ff-base);
+    font-weight: var(--fw-regular);
+}
+
+@media (min-width:375px) {
+    body {
+        background-image: url("images/pattern-background-desktop.svg");
+    }
+}
+
+.flex-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.grid-group {
+    display: grid;
+    color: var(--clr-neutral-23);
+    font-weight: var(--fw-bold);
+}
+
+span {
+    color: var(--clr-neutral-55);
+}
+
+.product {
+    display: grid;
+    gap: 0.25rem;
+    max-width: 350px;
+    overflow: hidden;
+    background-color: var(--clr-neutral-98);
+    color: var(--clr-neutral-55);
+    text-align: center;
+    border-radius: 2rem;
+}
+
+div {
+    padding: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    color: var(--clr-neutral-23);
+    font-weight: var(--fw-bolder);
+}
+
+.content {
+    padding: 2rem;
+}
+
+a {
+    color: var(--clr-secodary);
+}
+
+.btns {
+    display: grid;
+    gap: 1rem;
+}
+
+.payment {
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--clr-secodary);
+    color: var(--clr-neutral-98);
+    padding: 1rem;
+}
+
+.cancel {
+    border: none;
+    background-color: var(--clr-neutral-98);
+    color: var(--clr-neutral-55);
+}
